@@ -6,10 +6,10 @@ module.exports = {
   devServer: {
     proxy: {
       '/videos.json': {
-        target: 'http://localhost:3000/',
+        target: 'http://localhost:5587/',
       },
       '/videos/': {
-        target: 'http://localhost:3000/',
+        target: 'http://localhost:5587/',
       },
     },
     historyApiFallback: true,

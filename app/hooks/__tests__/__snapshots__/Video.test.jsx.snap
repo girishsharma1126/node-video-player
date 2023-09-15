@@ -7,16 +7,32 @@ exports[`should render correctly 1`] = `
   <div
     className="col-md-12"
   >
+    <button
+      className="closeVideoBtn btn btn-danger btn-md text-center"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      <i
+        className="fa fa-times"
+      />
+    </button>
     <video
       autoPlay={true}
       controls={true}
       width="100%"
     >
       <source
-        src="/videos/file.mp4"
+        src="/videos/dummy-files/Video_File.mp4"
         type="video/mp4"
       />
     </video>
+    <h3
+      className="nowPlayingTitle mt-2"
+    >
+      Now playing:
+       
+      Video_File
+    </h3>
   </div>
 </div>
 `;

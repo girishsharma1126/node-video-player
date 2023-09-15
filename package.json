@@ -24,6 +24,7 @@
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
     "fetch-mock": "^9.10.5",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.2.1",
     "node-fetch": "^2.6.0",
     "react-test-renderer": "^16.13.1",
@@ -52,5 +53,11 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-merge": "^5.0.9"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css)$": "identity-obj-proxy"
+    }
   }
 }

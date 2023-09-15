@@ -14,13 +14,21 @@ const Video = ({ src, onCloseVideo }) => {
   return (
     <div className={`row video-container ${src !== '' ? 'visible' : ''}`}>
       <div className="col-md-12">
-        <button type="button" onClick={onCloseVideo} className="closeVideoBtn btn btn-danger btn-md text-center">
-          <i className="fa fa-times" />
+        <button
+          className="closeVideoBtn btn btn-danger btn-md text-center"
+          onClick={onCloseVideo}
+          type="button"
+        >
+          <i
+            className="fa fa-times"
+          />
         </button>
         <video autoPlay controls width="100%" key={src}>
           <source src={`${src}`} type={`video/${extension}`} />
         </video>
-        <h3 className="nowPlayingTitle mt-2">
+        <h3
+          className="nowPlayingTitle mt-2"
+        >
           Now playing:
           {' '}
           {getNowPlaying(src)}

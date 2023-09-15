@@ -173,13 +173,15 @@ body {
 }
 .clearIcon {
     float: right;
-    padding: 11px 0;
     min-width: 35px;
-    margin-top: -37px;
+    margin-top: -38px;
     text-align: center;
     position: relative;
     z-index: 999;
     background: #f0f0f0;
+    height: 37px;
+    border: navajowhite;
+    border-radius: 3px;
 }
 .closeVideoBtn {
     position: relative;

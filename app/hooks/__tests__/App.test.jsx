@@ -47,7 +47,7 @@ describe('when a video is selected', () => {
     });
 
     const video = subject.root.findByType(Video);
-    expect(video.props.src).toEqual('new video.mp4');
+    expect(video.props.src).toEqual('/videos/new video.mp4');
   });
 
   it('should scroll to the top of the body', async () => {

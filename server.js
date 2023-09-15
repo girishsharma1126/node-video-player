@@ -14,10 +14,10 @@ function createApp(appDirectory, videoDirectory) {
 
   app.post('/videos.json', async (req, res) => {
     const dir = req.body.dir?.trim();
-    const files = dir ? await fs.readdirSync(dir || videoDirectory) : [];
+    const files = (dir || videoDirectory) ? await fs.readdirSync(dir || videoDirectory) : [];
     const filenames = [];
     for (const file of files) {
-      const stat = await fs.lstat(path.join(dir, file));
+      const stat = await fs.lstat(path.join(dir || videoDirectory, file));
       if (stat.isDirectory() || videoFileNamePattern.test(path.extname(file).toLowerCase())) {
         filenames.push(file?.trim());
       }

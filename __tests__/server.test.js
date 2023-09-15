@@ -4,7 +4,7 @@ const { createApp } = require('../server');
 
 const app = createApp(
   path.join(__dirname, '..', '__sandbox__', 'build'),
-  path.join(__dirname, '..', '__sandbox__'),
+  path.join(__dirname, '..', '__sandbox__', 'dummy-files'),
 );
 let agent;
 

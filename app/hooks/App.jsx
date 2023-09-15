@@ -2,12 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import Video from './Video';
 import VideoList from './VideoList';
+// eslint-disable-next-line no-unused-vars
 import css from './style.css';
 import config from '../../config.json';
 
 const App = () => {
   const homeDir = config.videoDirectory;
-  const ignoreExt = config.ignoreExt;
+  const { ignoreExt } = config;
   const [currentVideo, setCurrentVideo] = React.useState('');
   const [search, setSearch] = React.useState('');
   const [allValues, setVideoList] = React.useState({
@@ -17,7 +18,7 @@ const App = () => {
   const videoFileNamePattern = new RegExp(`(\\.${config.videoFileTypes.join('|\\.')})$`, 'i');
 
   const fetchVideos = (cancelled = false, dir = allValues.currentDir) => {
-    fetch(`/videos.json?dir=${dir}`, {
+    fetch('/videos.json', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -35,7 +36,7 @@ const App = () => {
             videoList: r.filenames.filter((i) => {
               let ext = i.split('.');
               ext = ext[ext.length - 1];
-              if (ignoreExt.indexOf(ext) === -1) return i;
+              return ignoreExt.indexOf(ext) === -1;
             }),
           });
         }
@@ -109,7 +110,9 @@ const App = () => {
                 </button>
                 <div className="directoryFilters col-md-3">
                   <input type="text" className="form-control searchFilterInput" value={search} onChange={(e) => onSearch(e)} autoComplete="off" />
-                  <i className="fa fa-times clearIcon" onClick={onClearSearchFilters} />
+                  <button type="button" className="clearIcon" onClick={onClearSearchFilters}>
+                    <i className="fa fa-times" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -118,8 +121,9 @@ const App = () => {
       <div className="row">
         <div className={classnames({
           'col-md-6': !!currentVideo,
-          'col-md-12': !currentVideo
-        })}>
+          'col-md-12': !currentVideo,
+        })}
+        >
           <VideoList
             onClick={onVideoClick}
             videos={allValues.videoList}

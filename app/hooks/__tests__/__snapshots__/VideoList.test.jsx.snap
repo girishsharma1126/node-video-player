@@ -5,46 +5,91 @@ exports[`should render correctly 1`] = `
   className="row"
 >
   <div
-    className="col-md-3 cursor-pointer text-center"
-    onClick={[Function]}
-    onKeyPress={[Function]}
-    role="link"
-    tabIndex={0}
+    className="col-md-2 gallery mt-3"
   >
-    <img
-      alt="file1"
-      className="thumbnail"
-      src="/videos/file1.mp4.jpg"
-    />
-    file1
+    <div
+      className="videoBox"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="link"
+      tabIndex={0}
+    >
+      <span
+        className="videoContainer"
+      >
+        <i
+          className="fa fa-camera-retro fa-5x"
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        />
+      </span>
+      <div
+        className="title"
+      >
+        file1
+      </div>
+    </div>
   </div>
   <div
-    className="col-md-3 cursor-pointer text-center"
-    onClick={[Function]}
-    onKeyPress={[Function]}
-    role="link"
-    tabIndex={0}
+    className="col-md-2 gallery mt-3"
   >
-    <img
-      alt="file2"
-      className="thumbnail"
-      src="/videos/file2.mp4.jpg"
-    />
-    file2
+    <div
+      className="videoBox"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="link"
+      tabIndex={0}
+    >
+      <span
+        className="videoContainer"
+      >
+        <i
+          className="fa fa-camera-retro fa-5x"
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        />
+      </span>
+      <div
+        className="title"
+      >
+        file2
+      </div>
+    </div>
   </div>
   <div
-    className="col-md-3 cursor-pointer text-center"
-    onClick={[Function]}
-    onKeyPress={[Function]}
-    role="link"
-    tabIndex={0}
+    className="col-md-2 gallery mt-3"
   >
-    <img
-      alt="file3"
-      className="thumbnail"
-      src="/videos/file3.mp4.jpg"
-    />
-    file3
+    <div
+      className="videoBox"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="link"
+      tabIndex={0}
+    >
+      <span
+        className="videoContainer"
+      >
+        <i
+          className="fa fa-camera-retro fa-5x"
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        />
+      </span>
+      <div
+        className="title"
+      >
+        file3
+      </div>
+    </div>
   </div>
 </div>
 `;
